@@ -1,0 +1,42 @@
+﻿ @{
+    ViewBag.Title = "Grade Calculator";
+    ViewBag.h1 = "Grade Calculator";
+    ViewBag.h2 = "Good Luck!";
+}
+@model GradesModel
+
+<body>
+    <div class="grades-container">
+        <fieldset>
+            <legend>Grade Calculator</legend>
+            <p class="subtext">Please Enter the total grade percentage you received as a <b>whole number</b> for each category. (ex.  97)</p>
+            <form method="post">
+                <label for="assignments">Assignments:</label>
+                <input type="number" id="assignments" placeholder="0" asp-for="assignments">
+                <br>
+                <label for="group">Group Projects:</label>
+                <input type="number" id="group" placeholder="0" asp-for="group">
+                <br>
+                <label for="quizzes">Quizzes:</label>
+                <input type="number" id="quizzes" placeholder="0" asp-for="quizzes">
+                <br>
+                <label for="exams">Exams:</label>
+                <input type="number" id="exams" placeholder="0" asp-for="exams">
+                <br>
+                <label for="intex">INTEX:</label>
+                <input type="number" id="intex" placeholder="0" asp-for="intex">
+                <input type="submit" value="Calculate!" class="btn" id="submit">
+                <div asp-validation-summary="All"></div>
+            </form>
+        </fieldset>
+        @*<fieldset id="outputBox" style="display: none;" class="output">
+            <legend>Final Grade</legend>
+            <p id="salutation"></p>
+            <p>Your final score for this course is:</p>
+            <p id="pct" class="pct"></p>
+            <p>You got <span id="letter"></span></p>
+            <input class="btn" type="submit" id="clear" value="Clear">
+        </fieldset>*@
+    </div>
+    <p>@ViewBag.assignments</p>
+</body>

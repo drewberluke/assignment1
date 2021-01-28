@@ -1,0 +1,42 @@
+﻿<!-- Andrew Luke
+Jan 19 2020
+IS 413 Assignment #1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="~/img/mario.ico" type="image/x-icon">
+    <link rel="stylesheet" href="~/css/main.css">
+    <title>@ViewBag.Title</title>
+</head>
+
+<body>
+    <header>
+        <menu>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Home" asp-action="Grades">Grades</a></li>
+            </ul>
+        </menu>
+    </header>
+    <h1>@ViewBag.h1</h1>
+    <h1>@ViewBag.h2</h1>
+
+    @RenderBody()
+
+    <footer>
+        <br><br>
+        <p>
+            Brought to you by Drew Luke Inc.&copy;
+        </p>
+    </footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/functions.js"></script>
+</body>
+
+
+</html>
